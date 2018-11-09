@@ -8,11 +8,11 @@ public class CreateNoteDto {
 	
 	private String color;
 	
-	private boolean isArchived;
+	private boolean archive;
 	
-	private boolean inTrash;
+	private boolean trash;
 	
-	private boolean isPinned;
+	private boolean pin;
 	
 	private String image;
 
@@ -40,28 +40,28 @@ public class CreateNoteDto {
 		this.color = color;
 	}
 
-	public boolean isArchived() {
-		return isArchived;
+	public boolean isArchive() {
+		return archive;
 	}
 
-	public void setArchived(boolean isArchived) {
-		this.isArchived = isArchived;
+	public void setArchive(boolean archive) {
+		this.archive = archive;
 	}
 
-	public boolean isInTrash() {
-		return inTrash;
+	public boolean isTrash() {
+		return trash;
 	}
 
-	public void setInTrash(boolean inTrash) {
-		this.inTrash = inTrash;
+	public void setTrash(boolean trash) {
+		this.trash = trash;
 	}
 
-	public boolean isPinned() {
-		return isPinned;
+	public boolean isPin() {
+		return pin;
 	}
 
-	public void setPinned(boolean isPinned) {
-		this.isPinned = isPinned;
+	public void setPin(boolean pin) {
+		this.pin = pin;
 	}
 
 	public String getImage() {
@@ -71,5 +71,7 @@ public class CreateNoteDto {
 	public void setImage(String image) {
 		this.image = image;
 	}
+
+	
 	
 }

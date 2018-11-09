@@ -8,11 +8,11 @@ import reactor.core.publisher.Mono;
 
 public interface INoteService {
 
-	Mono<Note> createNote(Mono<Note> mono, String token);
-//	
-//	Flux<Note> getNotes(String userId);
-//	
+	Mono<Note> createNote(Mono<CreateNoteDto> mono, String token);
+	Flux<Note> getNotesOfUser(String userId);
+	
 //	Mono<Note> updateNote(Mono<Note> monoNote);
-//	
-//	Mono<String> deleteNote(String noteId);
+	
+	Mono<String> deleteNote(String noteId);
+	Mono<Note> updateNote(Mono<Note> mononote, String token);
 }

@@ -71,8 +71,8 @@ public class UserService implements IUserService {
 		return monoUser.flatMap(u -> {
 			return userRepository.findByEmail(u.getEmail()).map(user -> {
 				if (passwordEncoder.matches(u.getPassword(), user.getPassword())) {
-					String token = GenerateToken.generateUserToken(u.getFirstname(), u.getLastname(), u.getUserId(),
-							u.getEmail());
+					String token = GenerateToken.generateUserToken(user.getFirstname(), user.getLastname(), user.getUserId(),
+							user.getEmail());
 					return token;
 				} else {
 					return null;

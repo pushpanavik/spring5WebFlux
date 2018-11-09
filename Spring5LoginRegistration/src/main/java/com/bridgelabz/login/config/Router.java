@@ -34,6 +34,11 @@ public class Router {
 				.andRoute(RequestPredicates.POST("/forgotpassword"), userHandler::forgotPassword)
 				.andRoute(RequestPredicates.GET("/resetpwd/{token:.+}"), userHandler::resetpwd)
 				.andRoute(RequestPredicates.POST("/resetpassword"), userHandler::resetPassword)
+				.andRoute(RequestPredicates.POST("/createNote"), noteHandler::createNote)
+				.andRoute(RequestPredicates.DELETE("/deleteNote/{id}"),noteHandler::deleteNote)
+				.andRoute(RequestPredicates.GET("/getNotesOfUser"), noteHandler::getNotesOfUser)
+				.andRoute(RequestPredicates.PUT("/updateNote"), noteHandler::updateNote)
+				
 				;
 	}
 	

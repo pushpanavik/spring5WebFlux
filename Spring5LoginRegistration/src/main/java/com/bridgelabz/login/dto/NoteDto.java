@@ -4,18 +4,18 @@ import java.time.LocalDateTime;
 
 public class NoteDto extends CreateNoteDto {
 
-	private String id;
+	private String noteid;
 
 	private LocalDateTime createdAt;
 
 	private LocalDateTime updatedAt;
 
 	public String getId() {
-		return id;
+		return noteid;
 	}
 
 	public void setId(String id) {
-		this.id = id;
+		this.noteid = id;
 	}
 
 	public LocalDateTime getCreatedAt() {
